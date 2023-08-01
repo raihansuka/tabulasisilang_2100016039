@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2100016039_RaihanAfif</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      height: 50px;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .chart-card {
+      width: 600px;
+      height: 820px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .extra-card {
+      width: 1000px;
+      height: 430px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #fff;
+      flex-direction: column;
+    }
+    
+    .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this height to your preference */
+  }
+
+  .content-paragraph {
+    text-align: justify; /* Paragraf akan diatur rapi dalam layout jusitified */
+    line-height: 1.5; /* Atur jarak antara baris untuk memastikan legibilitas */
+  }
+
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        PENYEBAB KEMATIAN DI INDONESIA
+      </div>
+    <div class="container">
+    <div class="chart-card">
+      <canvas id="disasterChart" width="500" height="500"></canvas>
+      <p class="content-paragraph">Grafik ini menunjukkan data penyebab kematian di Indonesia dari tahun 2000 hingga 2022 terkait dengan tiga kategori berbeda:</p>
+
+        <li> Alam (Warna Merah Muda): Menampilkan jumlah kematian akibat bencana alam seperti gempa bumi, tsunami, letusan gunung berapi, banjir, dan kekeringan pada tahun-tahun tertentu.</li>
+        
+        <li>Bencana Non Alam dan Penyakit (Warna Biru Muda): Menampilkan jumlah kematian yang disebabkan oleh bencana non alam dan penyakit seperti penyakit menular dan pernapasan pada tahun-tahun tertentu.</li>
+        
+        <li>Bencana Sosial (Warna Hijau): Menampilkan jumlah kematian akibat bencana sosial seperti konflik bersenjata dan kerusuhan pada tahun-tahun tertentu.</li>
+        
+        <p>Grafik ini memberikan pandangan tentang perbandingan jumlah kematian antara tiga kategori ini dari waktu ke waktu.</p>
+    </div>
+
+    <div class="chart-card">
+      <canvas id="deathCausesChart" width="500" height="500"></canvas>
+      <p class="content-paragraph">Grafik ini merupakan grafik garis yang menampilkan data penyebab kematian di Indonesia berdasarkan tahun dan jenis penyebab. Data tersebut mencakup beberapa kategori penyebab kematian seperti banjir, banjir bandang, diare dan gastroenteritis, gagal ginjal lainnya, serta kehamilan yang berakhir abortus.
+
+        Setiap garis pada grafik mewakili jumlah kematian yang dilaporkan pada tahun-tahun tertentu terkait dengan jenis penyebab kematian yang spesifik. Grafik ini memberikan pandangan tentang tren dan perbandingan jumlah kematian akibat penyebab tertentu dari waktu ke waktu.</p>
+    </div>
+  </div>
+  <div class="center-container">
+  <div class="extra-card">
+    <!-- Add content for the extra card here -->
+    <h2>BENCANA YANG TAK KUNJUNG USAI</h2>
+    <p class="content-paragraph"> Selamat datang di Indonesia, negara yang indah nan beragam! Anda akan diajak untuk menjelajahi data penyebab-penyebab kematian di Indonesia mulai tahun 2000 hingga 2022.
+
+        Mari kita mulai perjalanan ini dengan melihat grafik pertama di sebelah kiri. Grafik ini mengungkapkan catatan tentang berbagai bencana alam yang pernah melanda negeri ini. Mulai dari tahun 2000 hingga 2022, grafik dengan warna merah mewakili jumlah kematian akibat bencana alam. 
+        
+        Tapi jangan khawatir, ada juga grafik berwarna biru dan hijau yang menunjukkan bencana non-alam dan bencana sosial.
+        
+        Begitu banyak data menarik yang bisa Anda temukan di sini. Misalnya, di tahun 2004, ada peristiwa bencana alam yang menyebabkan gelombang merah dengan angka yang mengkhawatirkan. Namun, di tahun-tahun sebelumnya, bencana alam tampaknya belum berdampak serius seperti saat itu.
+        
+        Jangan berhenti di sini! Langsung saja pandangi grafik kedua di sebelah kanan. Ini adalah grafik garis yang menunjukkan penyebab kematian yang dilaporkan di Indonesia. Warna merah muda menceritakan tentang banjir, sementara biru muda melambangkan banjir bandang. Ada juga warna kuning yang mewakili diare dan gastroenteritis.
+        
+        Grafik ini memberi kita pandangan tentang berbagai penyebab kematian, dan menariknya, beberapa di antaranya menunjukkan tren yang menarik dari tahun ke tahun. Apakah Anda dapat menemukan fakta menarik lainnya?
+        
+        Akan ada lebih banyak penemuan menarik di kartu tambahan di bawahnya. Kartu tersebut memiliki dimensi yang lebih besar dan menampilkan data kematian yang lebih terperinci dan menyeluruh.
+        
+        Jadi, selamatkan dulu tiket perjalanan Anda ke Indonesia, karena Anda akan diajak dalam petualangan data yang menarik dan penuh penemuan baru. Temukan kisah-kisah menarik di balik data ini dan rasakan keajaiban statistik yang mengungkap fakta-fakta tentang kematian dan peristiwa di negara ini. Selamat berselancar dalam dunia data!</p>
+       
+    </div>
+</div>
+</div>
+  <script>
+    // Data for the first chart (Bencana Alam, Bencana Non Alam dan Penyakit, Bencana Sosial)
+    const disasterData = {
+      labels: [
+        "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007",
+        "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015",
+        "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+      ],
+      datasets: [
+        {
+          label: "Bencana Alam",
+          backgroundColor: "rgba(255, 99, 132, 0.5)",
+          borderColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 1,
+          data: [
+            0, 0, 0, 0, 166698, 1973, 6960, 562, 262, 1447, 1306, 172,
+            174, 0, 0, 215, 442, 169, 3739, 352, 236, 583, 0
+          ],
+        },
+        {
+          label: "Bencana Non Alam dan Penyakit",
+          backgroundColor: "rgba(54, 162, 235, 0.5)",
+          borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 1,
+          data: [
+            339, 324, 435, 633, 54046, 121063, 120104, 88713, 106035,
+            31661, 37922, 1967, 1595, 1145, 1199, 2096, 2156, 875, 1212,
+            14338, 37823, 138519, 12876
+          ],
+        },
+        {
+          label: "Bencana Sosial",
+          backgroundColor: "rgba(75, 192, 192, 0.5)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1,
+          data: [0, 0, 0, 0, 0, 0, 1, 0, 1, 16, 33, 34, 65, 0, 0, 45, 26, 0, 25, 7, 4, 4, 0],
+        },
+      ],
+    };
+
+    // Configuration for the first chart
+    const disasterConfig = {
+      type: "bar",
+      data: disasterData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "top",
+          },
+          title: {
+            display: true,
+            text: "Data Penyebab-penyebab Kematian di Indonesia ",
+          },
+        },
+      },
+    };
+
+    // Create the first chart
+    const disasterCtx = document.getElementById("disasterChart").getContext("2d");
+    new Chart(disasterCtx, disasterConfig);
+
+    // Data for the second chart (Penyebab Kematian di Indonesia yang Dilaporkan - Clean)
+    const deathCausesData = {
+      labels: [
+        "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007",
+        "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015",
+        "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+      ],
+      datasets: [
+        {
+          label: "Banjir",
+          backgroundColor: "rgba(255, 99, 132, 0.5)",
+          borderColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 1,
+          data: [0, 0, 0, 0, 0, 2, 108, 140, 58, 30, 33, 14, 9, 0, 0, 35, 42, 6, 26, 43, 88, 124, 0],
+        },
+        {
+          label: "Banjir Bandang",
+          backgroundColor: "rgba(54, 162, 235, 0.5)",
+          borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 1,
+          data: [0, 0, 0, 0, 0, 0, 251, 0, 42, 127, 215, 55, 38, 0, 0, 20, 81, 23, 18, 109, 49, 120, 0],
+        },
+        {
+          label: "Diare & gastroenteritis Oleh penyebab infeksi tertentu (kolitis infeksi)",
+          backgroundColor: "rgba(255, 206, 86, 0.5)",
+          borderColor: "rgba(255, 206, 86, 1)",
+          borderWidth: 1,
+          data: [0, 0, 0, 0, 3941, 0, 2716, 0, 0, 1747, 1289, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          label: "Gagal ginjal lainnya",
+          backgroundColor: "rgba(75, 192, 192, 0.5)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1,
+          data: [0, 0, 0, 0, 0, 3047, 2521, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          label: "Kehamilan yang berakhir abortus",
+          backgroundColor: "rgba(153, 102, 255, 0.5)",
+          borderColor: "rgba(153, 102, 255, 1)",
+          borderWidth: 1,
+          data: [0, 0, 0, 0, 499, 95, 205, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+      ],
+    };
+
+    // Configuration for the second chart
+    const deathCausesConfig = {
+      type: "line",
+      data: deathCausesData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "top",
+          },
+          title: {
+            display: true,
+            text: "Penyebab Kematian di Indonesia berdasarkan tahun dan tipe",
+          },
+        },
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+          },
+        },
+      },
+    };
+
+    // Create the second chart
+    const deathCausesCtx = document.getElementById("deathCausesChart").getContext("2d");
+    new Chart(deathCausesCtx, deathCausesConfig);
+  </script>
+</body>
+</html>
